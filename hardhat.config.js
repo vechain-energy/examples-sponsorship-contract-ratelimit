@@ -1,9 +1,9 @@
+require('hardhat-jest-plugin')
 require("@nomiclabs/hardhat-waffle");
 require('@vechain.energy/hardhat-thor')
 
 module.exports = {
   solidity: "0.8.4",
-  defaultNetwork: "vechain",
   networks: {
     vechain: {
       url: 'https://testnet.veblocks.net',
