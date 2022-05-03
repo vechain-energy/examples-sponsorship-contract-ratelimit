@@ -1,0 +1,27 @@
+{
+  "name": "sponsor-ratelimit",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.5",
+    "@nomiclabs/hardhat-waffle": "^2.0.3",
+    "@vechain.energy/hardhat-thor": "^0.1.5",
+    "hardhat": "^2.9.3",
+    "hardhat-jest-plugin": "^0.0.6",
+    "nodemon": "^2.0.16",
+    "standard": "^17.0.0"
+  },
+  "standard": {
+    "env": [
+      "jest"
+    ]
+  },
+  "scripts": {
+    "test": "hardhat test:jest",
+    "test:watch": "nodemon -e sol --exec 'hardhat test:jest --watch'"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.6.0"
+  }
+}
