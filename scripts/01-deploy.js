@@ -27,6 +27,9 @@ async function main() {
 
   const rateLimitAfter = await deployedLogic.rateLimitSponsorFor(deployerAddress, nft.address, '0x')
   console.log('rate limit after minting', rateLimitAfter)
+
+  const rateLimitShared = await deployedLogic.rateLimitSponsorFor(deployerAddress, logic.address, '0x')
+  console.log('rate limit shared for all users of the contract', rateLimitShared)
 }
 
 main()

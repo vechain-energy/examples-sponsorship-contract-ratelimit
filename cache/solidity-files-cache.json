@@ -479,8 +479,8 @@
       ]
     },
     "/Users/favo/workspace/vechain.energy/examples/sponsor-ratelimit/contracts/ExampleLogic.sol": {
-      "lastModificationDate": 1651571354391,
-      "contentHash": "7d574d8c8a7087abfae9b4789672fc53",
+      "lastModificationDate": 1651647012831,
+      "contentHash": "285b774bcab62a831d4362d5ace090fd",
       "sourceName": "contracts/ExampleLogic.sol",
       "solcConfig": {
         "version": "0.8.4",

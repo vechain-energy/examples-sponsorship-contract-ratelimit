@@ -31,15 +31,25 @@ contract ExampleLogic {
         view
         returns (
             uint32 limit,
-            uint32 perSeconds,
-            bytes32 identifier
+            uint32 duration,
+            bytes32 consumer,
+            bytes32 group
         )
     {
-        identifier = keccak256(abi.encodePacked(_origin));
+        consumer = keccak256(abi.encodePacked(_origin));
+        limit = 1;
+        duration = 600;
 
-        if (nft.balanceOf(_origin) == 0) {
-            limit = 1;
-            perSeconds = 3600;
+        if (nft.balanceOf(_origin) > 0) {
+            group = keccak256("nftOwners");
+            limit = 10;
+            duration = 10;
+        }
+
+        if (_to == address(this)) {
+            consumer = keccak256("everyone");
+            limit = 10;
+            duration = 60;
         }
     }
 }
